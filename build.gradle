@@ -1,0 +1,19 @@
+group 'com.wiredforcode'
+version '0.1'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.4'
+    compile 'org.scala-lang:scala-library:2.11.7'
+    testCompile ("org.spockframework:spock-core:1.0-groovy-2.4") {
+        exclude module: "groovy-all"
+    }
+}
