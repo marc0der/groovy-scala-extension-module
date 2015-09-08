@@ -1,8 +1,7 @@
 package com.wiredforcode.groovy.extensions.scala
 
 import scala.collection.Seq
-import scala.collection.immutable.List
-import scala.collection.immutable.Set
+import scala.collection.Set
 import spock.lang.Specification
 
 class CollectionExtensionsSpec extends Specification {
@@ -11,7 +10,7 @@ class CollectionExtensionsSpec extends Specification {
         def range = 1..3
 
         expect:
-        range.toScalaList() instanceof List
+        range.toScalaList() instanceof scala.collection.immutable.List
         range.toScalaList().size() == 3
         range.toScalaList().apply(0) == 1
         range.toScalaList().apply(1) == 2
@@ -41,5 +40,16 @@ class CollectionExtensionsSpec extends Specification {
         collection.toScalaSeq().apply(1) == "2"
         collection.toScalaSeq().apply(2) == "3"
         collection.toScalaSeq().apply(3) == "4"
+    }
+
+    void "should convert a java map to a scala map"() {
+        given:
+        def hashMap = [a: "1", b: "2", c: "3"]
+
+        expect:
+        hashMap.toScalaMap() instanceof scala.collection.mutable.Map
+        hashMap.toScalaMap().apply("a") == "1"
+        hashMap.toScalaMap().apply("b") == "2"
+        hashMap.toScalaMap().apply("c") == "3"
     }
 }

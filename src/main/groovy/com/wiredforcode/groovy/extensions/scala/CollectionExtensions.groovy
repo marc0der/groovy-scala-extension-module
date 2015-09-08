@@ -18,6 +18,10 @@ class CollectionExtensions {
         toScalaIterator(collection).toSeq()
     }
 
+    static <K,V> scala.collection.mutable.Map toScalaMap(java.util.AbstractMap<K,V> map) {
+        JavaConversions.mapAsScalaMap(map)
+    }
+
     private static <T> Iterator<T> toScalaIterator(Collection<T> collection) {
         JavaConversions.asScalaIterator(collection.iterator())
     }
