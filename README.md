@@ -12,7 +12,7 @@ Ensure that you have Bintray enabled as repository:
 
 Then simply add the following build dependency to your project:
 
-    compile 'com.wiredforcode:groovy-scala-extension-module:0.1'
+    compile 'com.wiredforcode:groovy-scala-extension-module:0.2'
     
 ### Collections
 
@@ -21,6 +21,7 @@ Currently this is the only integration point provided by the module. It decorate
 * `Collection.toScalaList()` yields a `scala.collection.immutable.List`
 * `Collection.toScalaSet()` yields a `scala.collection.immutable.Set`
 * `Collection.toScalaSeq()` yields a `scala.collection.Seq`
+* `java.util.AbstractMap.toScalaMap` yields a `scala.collection.mutable.Map`
 
 ### The Future
 
