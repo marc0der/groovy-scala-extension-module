@@ -13,6 +13,7 @@ buildscript {
 
 apply plugin: 'groovy'
 apply plugin: 'java'
+apply plugin: 'scala'
 apply from: 'gradle/publishing.gradle'
 
 sourceCompatibility = 1.8
