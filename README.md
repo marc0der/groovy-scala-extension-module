@@ -16,11 +16,11 @@ Then simply add the following build dependency to your project:
     
 ### Collections
 
-Currently this is the only integration point provided by the module. It decorates all `java.util.Collection` instances with handy convenience methods such as:
+It decorates all `java.util.Collection` and `java.util.AbstractMap` instances with handy convenience methods such as:
 
-* `Collection.toScalaList()` yields a `scala.collection.immutable.List`
-* `Collection.toScalaSet()` yields a `scala.collection.immutable.Set`
-* `Collection.toScalaSeq()` yields a `scala.collection.Seq`
+* `java.util.Collection.toScalaList()` yields a `scala.collection.immutable.List`
+* `java.util.Collection.toScalaSet()` yields a `scala.collection.immutable.Set`
+* `java.util.Collection.toScalaSeq()` yields a `scala.collection.Seq`
 * `java.util.AbstractMap.toScalaMap` yields a `scala.collection.mutable.Map`
 
 ### The Future
