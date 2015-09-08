@@ -1,3 +1,5 @@
 moduleName = scala-extension
 moduleVersion = 0.1
-extensionClasses = com.wiredforcode.groovy.extensions.scala.CollectionExtensions
+extensionClasses = \
+  com.wiredforcode.groovy.extensions.scala.CollectionExtensions, \
+  com.wiredforcode.groovy.extensions.scala.FutureExtensions

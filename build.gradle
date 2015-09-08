@@ -1,5 +1,5 @@
 group 'com.wiredforcode'
-version '0.2'
+version '0.3'
 
 buildscript {
     repositories {
@@ -41,3 +41,5 @@ task sourceJar(type: Jar) {
 artifacts {
     sourceJar
 }
+
+compileTestGroovy.dependsOn compileTestScala
