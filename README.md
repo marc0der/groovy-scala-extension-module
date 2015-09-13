@@ -12,7 +12,7 @@ Ensure that you have Bintray enabled as repository:
 
 Then simply add the following build dependency to your project:
 
-    compile 'com.wiredforcode:groovy-scala-extension-module:0.2'
+    compile 'com.wiredforcode:groovy-scala-extension-module:0.3'
     
 ### Collections
 
